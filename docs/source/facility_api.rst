@@ -62,6 +62,10 @@ access permissions. They also need to manage petabyte-scale data sets across mul
 file systems, and move data into and out of the HPC facility as needed. Including these
 functions through an ``/account`` endpoint allows automation of these tasks.
 
+Information on how to sign up for API and find example for its use can be found on NERSC's documentation pages:
+https://docs.nersc.gov/services/sfapi/
+
+
 Other
 ~~~~~
 ETH's CSCS is developing `FirecREST <https://github.com/eth-cscs/firecrest>`_ to program
