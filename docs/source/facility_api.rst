@@ -1,10 +1,19 @@
 APIs for Facilities
 ===================
 
+Engineering workflow pipelines to handle data collection and analysis at large scale 
+across a distributed architecture --- spanning separate instrument and supercomputing 
+facilities, management structures, authentication and authorizations systems, 
+and other technical and organizational disparities --- requires reliable, easily 
+programmable interfaces (APIs) to HPC resources that are based on common, 
+industry-standard tools and reusable by multiple science communities. 
+Thus, HPC APIs are a key enabling technology for projects that use modern instrument facilities, 
+allowing them to continue their natural upward scaling by leveraging off-site supercomputing 
+resources as easily as they have leveraged on-site HPC clusters in the past. 
+
 This page documents programmatic interfaces to HPC resources to enable a new
 paradigm of scientific endeavors, especially those that are automated or span
 multiple facilities.
- 
 
 .. attention::
 
