@@ -16,7 +16,7 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    :caption: Technologies
 
    containers
-   user_applications
+   workflow_support
    facility_api
    workflows
    identity_management
