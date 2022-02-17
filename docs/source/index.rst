@@ -15,12 +15,13 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    :maxdepth: 1
    :caption: Technologies
 
-   data_management
    containers
    user_applications
    facility_api
    workflows
    identity_management
+   data_transfer
+   data_management
 
 .. toctree::
    :glob:
@@ -28,10 +29,3 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    :caption: Use cases
 
    cctbx
-
-.. toctree::
-   :glob:
-   :maxdepth: 2
-   :caption: Examples
-
-   notebooks/**/index
