@@ -1,7 +1,7 @@
 Data Transfer
 =============
-This page documents for users how to transfer data between the three ASCR Facilities.   
-We also provide guidance on what storage endpoints are available across the ASCR facilities. 
+This page documents for users how to transfer data between the three ASCR Facilities. In general, we recommend that data be transferred using Globus instead of ``scp``, ``rsync`` for large data transfers.  
+We also provide guidance on what Globus endpoints are available across the ASCR facilities. 
 
 
 Globus
@@ -14,10 +14,21 @@ ALCF
 
 Users at the ALCF can leverage multiple Globus endpoints for their data transfers
 
-- Theta (alcf#dtn_theta) endpoint, for transfers to all filesystems at ALCF.
-- Eagle (alcf#dtn_eagle) endpoint, for transfers to the Eagle filesystem in particular. Eagle is a 100PB filesystem with additional data sharing functionality exposed through Globus. For more information about Globus sharing using Eagle, see the `related documentation <https://alcf.anl.gov/support-center/theta-and-thetagpu/eagle-data-sharing>`_.
-- HPSS (alcf#dtn_hpss) endpoint, a Globus endpoint for accessing the ALCF tape archive.
++----------------+-----------------------------------------------+---------------------------+
+|  Endpoint Name |               Description                     | Recommended Use           |
++================+===============================================+===========================+
+| ALCF#DTN_THETA |                                               | Transfers to/from all     |
+|                |                                               | filesystems at ALCF       |
++----------------+-----------------------------------------------+---------------------------+
+| ALCF#DTN_EAGLE | Eagle is a 100 PB filesystem with additional  | Transfers to/from Eagle   |
+|                | data sharing functionality exposed through    | filesystem                |
+|                | Globus.                                       |                           |
++----------------+-----------------------------------------------+---------------------------+
+| ALCF#DTN_HPSS  |                                               | Transfers to/from ALCF    |
+|                |                                               | tape archive              |
++----------------+-----------------------------------------------+---------------------------+
 
+For more information about Globus sharing using Eagle, see the `related documentation <https://alcf.anl.gov/support-center/theta-and-thetagpu/eagle-data-sharing>`_.
 
 NERSC
 ~~~~~~
