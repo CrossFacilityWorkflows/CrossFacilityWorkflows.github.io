@@ -8,7 +8,10 @@ use a "superfacility" paradigm to computing, where HPC is a reactive element
 which is tightly coupled to the experiment's data processing pipeline. `A
 recent publication <https://arxiv.org/abs/2106.11469>`_ demonstrates these
 workflows at NERSC. Critical for resiliancy is to enable failover to other
-facilities.
+facilities. Here we demonstrate how this workflow was deployed at multiple
+sites: data was collected at the `LCLS <https://lcls.slac.stanford.edu/>`_ and
+analyszed at `NERSC <https://www.nersc.gov>`_, `OLCF
+<https://lcls.slac.stanford.edu/>`_, and `ALCF <https://www.alcf.anl.gov/>`_.
 
 The following figure outlines the LCLS + NERSC workflow.
 
