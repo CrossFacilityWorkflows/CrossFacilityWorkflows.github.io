@@ -185,21 +185,21 @@ at NERSC)
 Portability
 -----------
 
-.. attention::
-    This section is WIP
-
-Portability requires that the data movement, data analysis, and workflow
-orchstration components be independent of the HPC environment where data
-processing takes place. While some amount of customization is inevitable, we
-improved portability by employing the following
-technologies:
+Here we outline our efforts to make the *cctbx.xfel** workflow portable accross
+ALCF, NERSC, and OLCF. Portability requires that the data movement, data
+analysis, and workflow orchstration components be independent of the HPC
+environment where data processing takes place. While some amount of
+site-specific customization in the workflow's setup is inevitable, we improved
+portability by employing the following technologies:
 
 1. Enable data to be "sent everywhere" at short notice.
-2. Build protable containers for the data analysis software. This allows rapdi
+2. Build protable containers for the data analysis software. This allows rapdid
    re-deployment at a new site.
 3. Host workflow orchestration on Kubernetes-based microservices platforms.
    This minimizes the amount of custom (site-local) pipeline management code.
 
+The portability of the diffent *cctbx.xfel* workflow components is summarized in
+the following table.
 
 .. figure:: ./assets/cctbx_portability.png
 
@@ -208,8 +208,11 @@ technologies:
    <https://www.olcf.ornl.gov>`_, `ALCF <https://www.alcf.anl.gov>`_, `LCLS
    <https://lcls.slac.stanford.edu/>`_
 
-.. attention::
-    TODO: Add links beween list and sections
+Green tiles indicate workflow components that perform well without significant
+site-specific customization (e.g. writing new code). Yellow tiles indicate
+components that while technically portable required significant size-specific
+code to be added to *cctbx.xfel*. Red tiles indicate components that are
+currently not portable.
 
 
 Data Movement
