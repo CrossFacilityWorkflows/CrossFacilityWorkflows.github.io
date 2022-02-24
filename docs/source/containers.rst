@@ -1,3 +1,5 @@
+.. _Containers:
+
 Containers
 ==========
 This page documents container infrastructure available at each site.
@@ -11,12 +13,17 @@ Applications deployed in containers typically run with little to no degradation 
 
     Under construction
 
+.. _ALCF Singularity:
+
 ALCF
 ~~~~
 
 ALCF deploys Singularity for use on the Theta system, including both the Intel KNL and NVIDIA A100 nodes. Singularity images can be derived from pre-existing Docker images, or built directly using Singularity recipes. Containerized applications have run successfully on Theta up to 4096 nodes with Singularity.
 
 Full details about using Singularity at ALCF can be found on the ALCF documentation site, for both `Theta <https://www.alcf.anl.gov/support-center/theta/singularity-theta/>`_ and `ThetaGPU <https://www.alcf.anl.gov/support-center/theta-gpu-nodes/nvidia-containers>`_. Further details about Singularity at ALCF are also available in materials from the ALCF Computational Performance workshop, `here <https://www.alcf.anl.gov/support-center/theta-gpu-nodes/nvidia-containers>`_.
+
+
+.. _NERSC Shifter:
 
 NERSC
 ~~~~~

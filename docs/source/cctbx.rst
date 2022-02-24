@@ -198,21 +198,19 @@ portability by employing the following technologies:
 #. Host workflow orchestration on Kubernetes-based microservices platforms.
    This minimizes the amount of custom (site-local) pipeline management code.
 
-The portability of the diffent *cctbx.xfel* workflow components is summarized in
-the following table.
+The portability of the diffent *cctbx.xfel* workflow components `NERSC
+<https://www.nersc.gov>`_, `OLCF <https://www.olcf.ornl.gov>`_, `ALCF
+<https://www.alcf.anl.gov>`_, and `LCLS <https://lcls.slac.stanford.edu/>`_ is
+summarized in the following table.
 
 .. figure:: ./assets/cctbx_portability.png
 
-   Portability experiences of the CCTBX Superfacility workflow accross 4
-   facilties: `NERSC <https://www.nersc.gov>`_, `OLCF
-   <https://www.olcf.ornl.gov>`_, `ALCF <https://www.alcf.anl.gov>`_, `LCLS
-   <https://lcls.slac.stanford.edu/>`_
-
-Green tiles indicate workflow components that perform well without significant
-site-specific customization (e.g. writing new code). Yellow tiles indicate
-components that while technically portable required significant size-specific
-code to be added to *cctbx.xfel*. Red tiles indicate components that are
-currently not portable.
+    Portability experiences of the CCTBX Superfacility workflow accross 4
+    facilties: NERSC, OLCF, ALCF, and LCLS. Green tiles indicate workflow
+    components that perform well without significant site-specific customization
+    (e.g.  writing new code). Yellow tiles indicate components that while
+    technically portable required significant size-specific code to be added to
+    *cctbx.xfel*. Red tiles indicate components that are currently not portable.
 
 
 Data Movement
@@ -230,20 +228,100 @@ of the pipeline as possible.  To this end we explored :ref:`DataFed` as it is
 built on :ref:`Globus`. Globus is availabe at all ASCR HPC sites, and has been
 configured for performance and high-concurrency. Using Globus as the data-plane
 therefore allows us to automatically make use of site-specific optimizations.
+DataFed is appealing to the *cctbx.xfel* workflow as it provides a cohesive data
+managament ecosystem which works well with the data lifecycle of Beamline
+workflows.
+
 
 Use Portable Containers
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-.. attention::
-    This section is WIP
-    TODO: copy relevant points from links
+We where able to build constainers that run on :ref:`Shifter<NERSC Shifter>` and
+:ref:`Signularity<ALCF Singularity>`, without needing to rebuild the image.
+Crucial to building a portable CCTBX container is including and ABI-compatible
+MPICH in the image, as well as enabling the dynamic linker to find system
+libraries.
 
-Instructions for building containers that run on shifter and singularity
-(without rebuilding):
+.. _Portable MPI:
 
-1. https://docs.nersc.gov/development/shifter/how-to-use/#using-mpi-in-shifter
-2. https://docs.nersc.gov/development/languages/python/parallel-python/#mpi4py
-3. https://www.alcf.anl.gov/support-center/theta/singularity-theta
+MPI
+~~~
+
+Shifter automatically links MPI into the image
+`<https://docs.nersc.gov/development/shifter/how-to-use/#using-mpi-in-shifter>`_.
+Therefore, a standard MPICH (and if needed mpi4py) install such this dockerfile
+
+.. code-block:: docker
+
+    FROM ubuntu:latest
+    WORKDIR /opt
+
+    RUN \
+        apt-get update        && \
+        apt-get install --yes    \
+            build-essential      \
+            gfortran             \
+            python3-dev          \
+            python3-pip          \
+            wget              && \
+        apt-get clean all
+
+    ARG mpich=3.3
+    ARG mpich_prefix=mpich-$mpich
+
+    RUN \
+        wget https://www.mpich.org/static/downloads/$mpich/$mpich_prefix.tar.gz && \
+        tar xvzf $mpich_prefix.tar.gz                                           && \
+        cd $mpich_prefix                                                        && \
+        ./configure                                                             && \
+        make -j 4                                                               && \
+        make install                                                            && \
+        make clean                                                              && \
+        cd ..                                                                   && \
+        rm -rf $mpich_prefix
+
+    RUN /sbin/ldconfig
+
+    RUN python3 -m pip install mpi4py
+
+will allow the dynamic linker to link against the system's MPICH at runtime.
+Shifter achieves this by mounting NERSC-specific libraries in the image and
+automatically prepending this location to :code:`LD_LIBRARY_PATH`. ALCF's
+Singularity runtime instead will only prepend the contents of
+:code:`SINGULARITYENV_LD_LIBRARY_PATH`.
+
+Linking External libraries
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In order to allow containers to resolve system-specific libraries at runtime,
+some care needs to taken when building containers. First, the recipe in the
+section on :ref:`Portable MPI` (above) ensures that mpi4py is linked against an
+ABI-compatible MPICH by building MPICH and using pip to build mpi4py (instead of
+using apt and anaconda). This also avoids the use of :code:`RPATH`s, which can
+overwrite the :code:`LD_LIBRARY_PATH`. Second sometimes a the executing
+environment needs to be able to prepend paths into the :code:`LD_LIBRARY_PATH`
+(to overwrite libraries therin). An example of this is used here:
+`<https://www.alcf.anl.gov/support-center/theta/singularity-theta>`_ for ALCF
+Theta:
+
+.. code-block:: bash
+
+    # Use Cray's Application Binary Independent MPI build
+    module swap cray-mpich cray-mpich-abi
+
+    # include CRAY_LD_LIBRARY_PATH in to the system library path
+    export LD_LIBRARY_PATH=$CRAY_LD_LIBRARY_PATH:$LD_LIBRARY_PATH
+    # also need this additional library
+    export LD_LIBRARY_PATH=/opt/cray/wlm_detect/default/lib64/:$LD_LIBRARY_PATH
+    # in order to pass environment variables to a Singularity container create the variable
+    # with the SINGULARITYENV_ prefix
+    export SINGULARITYENV_LD_LIBRARY_PATH=$LD_LIBRARY_PATH
+
+CCTBX exposes a similar variable :code:`DOCKER_LD_LIBRARY_PATH_PRE` by including
+:code:`export LD_LIBRARY_PATH=$DOCKER_LD_LIBRARY_PATH_PRE:$LD_LIBRARY_PATH` in
+its :code:`entrypoint.sh`. We find that controling the linker's behaviour by
+mounting system libraries and modifying the :code:`LD_LIBRARY_PATH` is
+sufficient in building a portable CCTBX image.
 
 
 Workflow Orchestration and Microservices
