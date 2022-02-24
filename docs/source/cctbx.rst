@@ -140,15 +140,46 @@ of concurrent data transfers and data transfer nodes.
 Facility Requirements
 ^^^^^^^^^^^^^^^^^^^^^
 
-When running at on a supercomputer, this workflow requires three types of nodes:
+.. important::
+    This workflow has many moving parts, all of which need to work well (and
+    well together) to allow of real-time data processing.
 
-* Many (64 and more) compute nodes: run the computationally-intensive data
-  analysis tasks (image processing and data reduction).
-* One workflow coordinate node: hosts database of done and new work, as well as
-  workflow statistics -- this is fairly light weight, just needs to be scalable
-  and have a fast network connection to the compute nodes.
-* Pipeline management nodes: run the GUI which is used by the science teams --
-  more often than not, this will just be a login node.
+
+When running at on a supercomputer, this workflow requires three types of
+resources: computational resources; workflow orchestration; and data handling.
+
+Computational Resources:
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Many (64 and more) compute nodes run the computationally-intensive data analysis
+tasks (image processing and data reduction). Future data analysis algorithms
+will also require GPU-accelerated compute nodes.
+
+Workflow Orchestration:
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Workflow orchestration requires that a persistent state is kept between
+individual compute jobs.  CCTBX stores this state in a MySQL database which
+stores a record of completed and new work, as well as workflow statistics. This
+is fairly light weight (producing approx. 100 GB in a 12 hour shift). It does
+need to be scalable and have a fast network connection to the compute nodes
+(8000 commit transactions per second are common).
+
+Furthermore *cctbx.xfel* the GUI which is used by the science teams to monitor
+the data analysis needs to be run on a node that is capable of accessing both
+the mySQL database, and the job scheduler. For that reason, this is usually
+hosted on  a workflow node, or a login node.
+
+Data handling:
+~~~~~~~~~~~~~~
+
+Incoming data is frequently handled by dedicated fata transfer nodes that are
+optimized to ingest large amounts of data from an external source. Furthermore
+the Facility requires high-performance file systems that can accommodate
+high-speed concurrent reads. For high-speed concurrent writes, CCTBX uses burst
+buffers (at NERSC, or at OLCF), or temporary on-node storage (eg. `Xfs
+<https://docs.nersc.gov/development/shifter/how-to-use/#temporary-xfs-files-for-optimizing-io>`_
+at NERSC)
 
 
 Portability
