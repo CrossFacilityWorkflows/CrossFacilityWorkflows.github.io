@@ -128,6 +128,14 @@ LCLS, then it can commence with data analysis when the API returns state 2. If
 it is running at NERSC, then data the GUI presents the run for analysis only
 once the API returns state 3.
 
+Data is transferred between sites using XRootD and Globus (cf the section on
+:ref:`Data Transfer`). It is essential that this process be automated, allowing
+scientists to focus on running the experiment, and data analysis. Furthermore it
+is essential that data is transferred at the highest possible speed, with a
+typical LCLS experiment producing approx. 15 TB duing a 12-hour shift. We
+therefore make use of the ESNet network. Furthermore XRootD and Globus make use
+of concurrent data transfers and data transfer nodes.
+
 
 Facility Requirements
 ^^^^^^^^^^^^^^^^^^^^^
@@ -181,6 +189,8 @@ Data Movement
     TODO: i) Describe how datafed solves the problem of accessing data from
     anywhere
 
+
+For DataFed: :ref:`DataFed`
 
 Use Portable Containers
 ^^^^^^^^^^^^^^^^^^^^^^^

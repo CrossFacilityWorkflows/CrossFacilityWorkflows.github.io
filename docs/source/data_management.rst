@@ -1,8 +1,13 @@
+.. _Data Management:
+
 Data Management
 ===============
 
+
+.. _DataFed:
+
 DataFed
----------
+-------
 
 .. image:: ./assets/Cross_Facility_Federation_of_Repositories.png
 

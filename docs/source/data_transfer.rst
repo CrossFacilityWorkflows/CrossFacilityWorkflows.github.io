@@ -1,3 +1,5 @@
+.. _Data Transfer:
+
 Data Transfer
 =============
 This page documents for users how to transfer data between the three ASCR Facilities. In general, we recommend that data be transferred using Globus instead of ``scp``, ``rsync`` for large data transfers.  
@@ -5,12 +7,12 @@ We also provide guidance on what Globus endpoints are available across the ASCR 
 
 
 Globus
--------
+------
 
 Globus is a service for scheduling data transfers between sites, filling a particular niche among users of large datasets at the DOE copmuting facilities (and elsewhere). Instead of synchronously transferring files, users schedule transfers to take place, and the Globus service manages the transfer, recovering as needed from failures, and notifying the user when the transfer completes. In addition to this convenient reliability, transfers over Globus are typically very performant, whether the user is transferring a few very large files, or a large collection of very small files.
 
 ALCF
-~~~~~~
+~~~~
 
 Users at the ALCF can leverage multiple Globus endpoints for their data transfers
 
@@ -31,7 +33,7 @@ Users at the ALCF can leverage multiple Globus endpoints for their data transfer
 For more information about Globus sharing using Eagle, see the `related documentation <https://alcf.anl.gov/support-center/theta-and-thetagpu/eagle-data-sharing>`_.
 
 NERSC
-~~~~~~
+~~~~~
 You can log into the Globus web interface with your NERSC credentials (by selecting NERSC in the drop down menu of supported identity providers) 
 or using many of the other supported providers listed that you can authenticate against. 
 NERSC maintains several Globus endpoints that can be activated for individual use by any NERSC user. 
@@ -62,7 +64,7 @@ The list of endpoints are provided in the table below.
 
 
 OLCF
-~~~~~~
+~~~~
 
 OLCF uses Globus for large bulk transfers into and out of the facility. 
 Documentation is available for `transfers from personal computing devices <https://docs.olcf.ornl.gov/data/transferring.html#using-globus-from-your-local-machine>`_ as well as endpoints from one facility to another. 
