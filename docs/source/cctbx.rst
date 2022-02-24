@@ -192,10 +192,10 @@ environment where data processing takes place. While some amount of
 site-specific customization in the workflow's setup is inevitable, we improved
 portability by employing the following technologies:
 
-1. Enable data to be "sent everywhere" at short notice.
-2. Build protable containers for the data analysis software. This allows rapdid
+#. Enable data to be "sent everywhere" at short notice.
+#. Build protable containers for the data analysis software. This allows rapdid
    re-deployment at a new site.
-3. Host workflow orchestration on Kubernetes-based microservices platforms.
+#. Host workflow orchestration on Kubernetes-based microservices platforms.
    This minimizes the amount of custom (site-local) pipeline management code.
 
 The portability of the diffent *cctbx.xfel* workflow components is summarized in
@@ -218,13 +218,18 @@ currently not portable.
 Data Movement
 ^^^^^^^^^^^^^
 
-.. attention::
-    This section is WIP
-    TODO: i) Describe how datafed solves the problem of accessing data from
-    anywhere
+XRootD was used for data transfers between NERSC and LCLS. While this setup
+allowed for scalable high-performance data transfers between LCLS and NERSC, it
+relied on an explicit pairing between LCLS and NERSC. Redirecting data transfers
+to another site (eg. ALCF or OLCF) would therefore require setting up a new
+XRootD cluster at the target site, and reconfigurign the cluter at LCLS.
 
-
-For DataFed: :ref:`DataFed`
+This project therefore explored the solutions that would enable the endpoint for
+data transfers to be changed quickly -- ideally with as little reconfiguration
+of the pipeline as possible.  To this end we explored :ref:`DataFed` as it is
+built on :ref:`Globus`. Globus is availabe at all ASCR HPC sites, and has been
+configured for performance and high-concurrency. Using Globus as the data-plane
+therefore allows us to automatically make use of site-specific optimizations.
 
 Use Portable Containers
 ^^^^^^^^^^^^^^^^^^^^^^^
