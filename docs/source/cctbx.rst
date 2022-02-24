@@ -69,7 +69,7 @@ Pipeline Management
 ^^^^^^^^^^^^^^^^^^^
 
 .. important::
-    EFEL data analysis requires interactive pipeline management tools in order
+    XFEL data analysis requires interactive pipeline management tools in order
     to automate routine tasks (such as organizing files, and job dependencies)
     and effectively provide fast feedback to experiment operators.
 
