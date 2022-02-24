@@ -7,11 +7,15 @@ automatic data management are central features of this workflow. We therefore
 use a "superfacility" paradigm to computing, where HPC is a reactive element
 which is tightly coupled to the experiment's data processing pipeline. `A
 recent publication <https://arxiv.org/abs/2106.11469>`_ demonstrates these
-workflows at NERSC. Critical for resiliancy is to enable failover to other
-facilities. Here we demonstrate how this workflow was deployed at multiple
-sites: data was collected at the `LCLS <https://lcls.slac.stanford.edu/>`_ and
-analyszed at `NERSC <https://www.nersc.gov>`_, `OLCF
-<https://lcls.slac.stanford.edu/>`_, and `ALCF <https://www.alcf.anl.gov/>`_.
+workflows at NERSC. Fast feedback (usually in the form of partial or even
+complete data analysis within minutes of a completed experimental trial) is
+vital to steer experiments where instrument time is limited. Hence experiments
+are adopting a strategy of integrating HPC facilities into their data processing
+pipelines in order to make use of their computational resources.  Here we
+demonstrate how this workflow was deployed at multiple sites: data was collected
+at the `LCLS <https://lcls.slac.stanford.edu/>`_ and analyszed at `NERSC
+<https://www.nersc.gov>`_, `OLCF <https://lcls.slac.stanford.edu/>`_, and `ALCF
+<https://www.alcf.anl.gov/>`_.
 
 The following figure outlines the LCLS + NERSC workflow.
 
@@ -22,7 +26,7 @@ The following figure outlines the LCLS + NERSC workflow.
     run is completed, a XRootD cluster automatically copies all files associated
     with that run to the SCRATCH Lustre file system at NERSC (dashed arrow) over
     the ESNet network, using two data transfer nodes. Once the data for a run
-    has been completely transferred to NERSC, the cctbxl job sentinel tool
+    has been completely transferred to NERSC, the CCTBX "job sentinel" tool
     (running on a login node, middle box) automatically submits data analysis
     jobs (running in shifter containers, bottom right box). The data analysis at
     NERSC are coordinated by a MySQL database hosted on the Spin microservices
@@ -41,17 +45,18 @@ systems. Data analysis involves processing anywhere between hundreds of
 thousands to millions of images. These are stored as arrays of pixel intensity
 values. Here we focus on a subset of features and algorithms -- called
 *cctbx.xfel* -- which specialize in SFX experimental data analysis. The result
-of data processing is a list of features (such a Bragg spot shape, and Miller
-indices) derived from the input data set, as well as refined experimental
-parameters (such as detector position and orientation relative to the beam).
+of data processing is a list of features (such a Bragg spot intensity and shape,
+and Miller indices) derived from the input data set, as well as refined
+experimental parameters (such as detector position and orientation relative to
+the beam).
 
 *cctbx.xfel* is a python package which is designed to interface with other SFX
-data analysis workflows, such as `DAILS <https://dials.github.io/>`_. This
-makes it highly versatile, and allows non-software specialists to implement
-data analysis algorithms. Furthermore, most experimental facilities provide
-custom software packages to interface with facility data collection and
-logging. These packages almost always provide a Python API. Therefore the data
-analysis coordinated and scripted using Python
+data analysis workflows, such as `DAILS <https://dials.github.io/>`_. This makes
+it highly versatile, and allows non-software specialists to implement data
+analysis algorithms. Furthermore, most experimental facilities provide custom
+software packages to interface with facility data collection and logging. These
+packages almost always provide a Python API. Therefore the data analysis
+coordinated and scripted using Python
 
 The computationally intensive work is implemented in C++, and recent work makes
 use of CUDA and `Kokkos <https://github.com/kokkos/kokkos>`_ for some of the
@@ -65,7 +70,8 @@ Pipeline Management
 
 .. important::
     EFEL data analysis requires interactive pipeline management tools in order
-    to effectively provide fast feedback to experiment operators.
+    to automate routine tasks (such as organizing files, and job dependencies)
+    and effectively provide fast feedback to experiment operators.
 
 *cctbx.xfel* provides a complete pipeline management systems in the form of a
 graphical user interface. Either by monitoring a directory for new data, or by
