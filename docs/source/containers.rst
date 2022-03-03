@@ -28,7 +28,7 @@ Full details about using Singularity at ALCF can be found on the ALCF documentat
 NERSC
 ~~~~~
 
-NERSC has been an early adopter and propenent of containers for scientific and HPC workflows.
+NERSC has been an early adopter and proponent of containers for scientific and HPC workflows.
 This led to the development of 
 `Shifter <https://www.nersc.gov/research-and-development/user-defined-images/>`_
 which is a software package that allows container images created with tools like Docker or Podman to run securely and scalably on large-scale HPC systems.
@@ -38,7 +38,7 @@ Shifter has several novel features that help with scalable launch and leveraging
 It is currently the best performing option for python code stacks across multiple nodes. 
 For full information on using Shifter at NERSC, please see `this page <https://docs.nersc.gov/development/shifter/how-to-use/>`_.
 
-NERSC is also evaluating `_Podman <https://podman.io/>`_ as an eventual replacement for Shifter.  
+NERSC is also evaluating `Podman <https://podman.io/>`_ as an eventual replacement for Shifter.  
 Podman will allow users to build images directly on the system and integrates more easily with standard container tools.  
 NERSC is developing enhancements to Podman to enable the same scalable launch features found in Shifter and other HPC container runtimes.
 
