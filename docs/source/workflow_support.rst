@@ -11,12 +11,18 @@ ALCF
 ~~~~
 ALCF is researching solutions for user service orchestration; this page will be updated as more details become available.
 
+
+.. _Workflow NERSC:
+
 NERSC
 ~~~~~
 `Spin <https://www.nersc.gov/systems/spin/>`_ is a container-based platform at NERSC designed to support scientific projects.
 Services in Spin are built with Docker containers and can easily access NERSC systems and storage.  Services are managed 
 via Rancher which provides a easy to use user-interface on top of Kubernetes.  Spin is ideal for running persistent services
 that may be required by a workflow or to host data generated on HPC systems.
+
+
+.. _Workflow OLCF:
 
 OLCF
 ~~~~

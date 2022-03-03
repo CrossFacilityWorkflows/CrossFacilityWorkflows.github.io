@@ -290,6 +290,7 @@ automatically prepending this location to :code:`LD_LIBRARY_PATH`. ALCF's
 Singularity runtime instead will only prepend the contents of
 :code:`SINGULARITYENV_LD_LIBRARY_PATH`.
 
+
 Linking External libraries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -327,7 +328,14 @@ sufficient in building a portable CCTBX image.
 Workflow Orchestration and Microservices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. attention::
-    This section is WIP
-    TODO: i) add Jason Kincl's noVNC example; ii) add OLCF Slate experiences -- how to make portable Microservices
-
+CCTBX was already making use of Microservices to host part of its workflow
+orchstration, by hosting the mySQL database on :ref:`NERSC's Spin<Workflow
+NERSC>`. It was therefore relatively easy to port the Rancher setup for the
+database to :ref:`OLCF's Slate<Workflow OLCf>` platform. Slate has an additional
+capability over Spin: it can access the Summit queue. We therefore deployed a
+`noVNC <https://novnc.com>`_ container on Slate. The openshift deployment can be
+found here:
+`<https://github.com/CrossFacilityWorkflows/BestPractices/tree/main/examples/novnc>`_
+This workload is capable of hosting the *cctbx.xfel* GUI. This way the entire
+*cctbx.xfel* workflow orchestration component is hosted on the same
+microservices platform.
