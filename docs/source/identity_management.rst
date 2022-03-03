@@ -2,11 +2,12 @@ Identity Management
 ===================
 
 Identity management across facilities remains a challenge.
-There are currently not in multi-site solutions that simplify
-creating and managing identities across sites.  However, there
+There are currently not any multi-site solutions in place that simplify
+creating and managing identities across the DOE sites.  However, there
 are various efforts underway that should address these challenges
 in the future.  Currently, users will need to request allocations
-and accounts at each site.
+and accounts at each site.  Below are pointers for each site describing
+how to get allocations and establish access.
 
 ALCF
 ~~~~
