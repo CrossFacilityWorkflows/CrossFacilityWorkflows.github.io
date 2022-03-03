@@ -28,17 +28,19 @@ Full details about using Singularity at ALCF can be found on the ALCF documentat
 NERSC
 ~~~~~
 
-.. image:: https://www.nersc.gov/assets/_resampled/ResizedImageWzYwMCw0NTNd/shifterDiagram.png
-
+NERSC has been an early adopter and propenent of containers for scientific and HPC workflows.
+This led to the development of 
 `Shifter <https://www.nersc.gov/research-and-development/user-defined-images/>`_
-is a software package that allows user-created images to run at NERSC.
-These images can be `Docker images <https://docs.docker.com/engine/reference/commandline/images/>`_ or other formats.
-Using Shifter you can create an image with your desired operating system and easily 
-install your software stacks and dependencies. 
-If you make your image in Docker, it can also be run at any other computing center that is Docker friendly. 
-Shifter also comes with improvements in performance, especially for shared libraries. 
+which is a software package that allows container images created with tools like Docker or Podman to run securely and scalably on large-scale HPC systems.
+Using containers with Shifter, users can create an image with there desired operating system and easily 
+install software stacks and dependencies. With some care these images can be run across different systems assuming architectual compatibility.
+Shifter has several novel features that help with scalable launch and leveraging high-performance interconnect and accelerators.
 It is currently the best performing option for python code stacks across multiple nodes. 
 For full information on using Shifter at NERSC, please see `this page <https://docs.nersc.gov/development/shifter/how-to-use/>`_.
+
+NERSC is also evaluating `_Podman <https://podman.io/>`_ as an eventual replacement for Shifter.  
+Podman will allow users to build images directly on the system and integrates more easily with standard container tools.  
+NERSC is developing enhancements to Podman to enable the same scalable launch features found in Shifter and other HPC container runtimes.
 
 OLCF 
 ~~~~
