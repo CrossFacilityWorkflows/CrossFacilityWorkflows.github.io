@@ -18,7 +18,7 @@ Applications deployed in containers typically run with little to no degradation 
 ALCF
 ~~~~
 
-ALCF deploys Singularity for use on the Theta system, including both the Intel KNL and NVIDIA A100 nodes. Singularity images can be derived from pre-existing Docker images, or built directly using Singularity recipes. Containerized applications have run successfully on Theta up to 4096 nodes with Singularity.
+ALCF deploys Singularity for use on the Theta system, including both the Intel KNL and NVIDIA A100 nodes. Singularity images can be derived from pre-existing Docker images, or built directly using Singularity recipes. Containerized applications have run successfully on Theta using up to 4096 nodes with Singularity.
 
 Full details about using Singularity at ALCF can be found on the ALCF documentation site, for both `Theta <https://www.alcf.anl.gov/support-center/theta/singularity-theta/>`_ and `ThetaGPU <https://www.alcf.anl.gov/support-center/theta-gpu-nodes/nvidia-containers>`_. Further details about Singularity at ALCF are also available in materials from the ALCF Computational Performance workshop, `here <https://www.alcf.anl.gov/support-center/theta-gpu-nodes/nvidia-containers>`_.
 
@@ -32,14 +32,14 @@ NERSC has been an early adopter and proponent of containers for scientific and H
 This led to the development of 
 `Shifter <https://www.nersc.gov/research-and-development/user-defined-images/>`_
 which is a software package that allows container images created with tools like Docker or Podman to run securely and scalably on large-scale HPC systems.
-Using containers with Shifter, users can create an image with there desired operating system and easily 
-install software stacks and dependencies. With some care these images can be run across different systems assuming architectual compatibility.
+Using containers with Shifter, users can create an image with their desired operating system and easily 
+install software stacks and dependencies. With some care these images can be run across different systems assuming architectural compatibility.
 Shifter has several novel features that help with scalable launch and leveraging high-performance interconnect and accelerators.
-It is currently the best performing option for python code stacks across multiple nodes. 
+It is currently the best performing option for Python code stacks across multiple nodes. 
 For full information on using Shifter at NERSC, please see `this page <https://docs.nersc.gov/development/shifter/how-to-use/>`_.
 
 NERSC is also evaluating `Podman <https://podman.io/>`_ as an eventual replacement for Shifter.  
-Podman will allow users to build images directly on the system and integrates more easily with standard container tools.  
+Podman will allow users to build images directly on the system and integrate more easily with standard container tools.  
 NERSC is developing enhancements to Podman to enable the same scalable launch features found in Shifter and other HPC container runtimes.
 
 OLCF
