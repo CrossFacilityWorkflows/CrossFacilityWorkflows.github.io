@@ -33,5 +33,28 @@ https://docs.nersc.gov/connect/federatedid/
 OLCF
 ~~~~
 
-Coming soon
+At OLCF, user accounts must be attached to active projects, and the resources
+that users can access depend on the security enclave that their projects were
+assigned at creation. There are two security enclaves at OLCF, and thus there
+are two kinds of accounts: OLCF Moderate and OLCF Open.
+
+Most of the resources that OLCF is famous for, like Summit and the upcoming
+`Frontier <https://www.olcf.ornl.gov/frontier/>`_, are part of the Moderate
+enclave. Most users will have an OLCF Moderate account. This enclave uses
+two-factor authentication by means of an RSA SecurID token or a mobile phone
+app.
+
+The Open enclave at OLCF has similar but smaller-scale resources than the
+Moderate enclave. For example,
+`Ascent <https://docs.olcf.ornl.gov/systems/ascent_user_guide.html>`_ has the
+same architecture and design as Summit, but it has only 18 nodes, whereas
+Summit has approximately 4,600. The Open enclave is most often used for
+training purposes or when the reduced security constraints are both compatible
+and necessary for a project to perform its scientific mission. This enclave
+uses the `XCAMS system <https://web.ornl.gov/xcams/xcamsfaq.htm>`_ for
+authentication.
+
+More information about the different account types, as well as information for
+how to apply for allocation, is available
+`here <https://docs.olcf.ornl.gov/accounts/index.html>`_.
 
