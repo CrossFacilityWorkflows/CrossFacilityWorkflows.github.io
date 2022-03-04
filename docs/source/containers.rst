@@ -42,5 +42,17 @@ NERSC is also evaluating `Podman <https://podman.io/>`_ as an eventual replaceme
 Podman will allow users to build images directly on the system and integrates more easily with standard container tools.  
 NERSC is developing enhancements to Podman to enable the same scalable launch features found in Shifter and other HPC container runtimes.
 
-OLCF 
+OLCF
 ~~~~
+
+OLCF supports the use of containers on its flagship machine, Summit, and its
+data analysis cluster, Andes, through `Podman <https://podman.io>`_ and
+`Singularity <https://sylabs.io/singularity>`_.
+
+To run containers on Summit, the recommended approach, which is detailed
+`here <https://docs.olcf.ornl.gov/software/containers_on_summit.html>`_, is to
+build a container image on a Summit login node using Podman, convert it to a
+SIF file, and then run the container on Summit's compute nodes using the
+Singularity runtime. Containers can also be built on non-OLCF machines, but
+this can be difficult to do because of the relative scarcity of machines with
+similar architectures (IBM POWER9 CPU and Nvidia V100 GPU).
