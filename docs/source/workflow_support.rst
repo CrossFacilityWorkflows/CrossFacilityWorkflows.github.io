@@ -30,13 +30,13 @@ OLCF
 The `Slate <https://docs.olcf.ornl.gov/services_and_applications/slate/overview.html>`_
 service at OLCF consists of two user-facing
 `OpenShift <https://docs.openshift.com/>`_ clusters in different security
-enclaves. Both clusters can access the shared filesystems and the batch queues
+enclaves. Both clusters can access the shared GPFS filesystems and the batch queues
 of the HPC resources in their respective enclaves:
 
-* Marble is in the Moderate enclave, which gives it access to the Alpine (GPFS)
+* Marble is in the Moderate enclave, which gives it access to the Alpine
   filesystem as well as the batch queues for Summit, Andes, and the Data
   Transfer Nodes.
-* Onyx is in the Open enclave, which gives it access to the Wolf (GPFS) 
+* Onyx is in the Open enclave, which gives it access to the Wolf 
   filesystem as well as the batch queue for Ascent.
 
 .. note::
