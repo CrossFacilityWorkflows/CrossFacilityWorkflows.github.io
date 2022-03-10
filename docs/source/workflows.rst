@@ -17,6 +17,8 @@ ALCF
 
 NERSC
 ~~~~~
+Information about workflow tools that are officially supported at NERSC is
+available `here <https://docs.nersc.gov/jobs/workflow-tools/>`_.
 
 OLCF
 ~~~~
