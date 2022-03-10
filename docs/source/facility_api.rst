@@ -15,10 +15,6 @@ This page documents programmatic interfaces to HPC resources to enable a new
 paradigm of scientific endeavors, especially those that are automated or span
 multiple facilities.
 
-.. attention::
-
-    Under construction
-
 ALCF
 ~~~~
 ALCF has traditionally developed the Cobalt scheduler for its systems, opening the opportunity to also expose aspects of the scheduler via a programmable API. This work is underway as part of scheduler development in preparation for the Aurora system.
@@ -74,6 +70,9 @@ functions through an ``/account`` endpoint allows automation of these tasks.
 Information on how to sign up for API and find example for its use can be found on NERSC's documentation pages:
 https://docs.nersc.gov/services/sfapi/
 
+OLCF
+~~~~
+The OLCF is exploring different APIs in the context of its machines and policies as of this writing.
 
 Other
 ~~~~~
