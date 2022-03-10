@@ -21,7 +21,7 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    :caption: Technologies
 
    containers
-   workflow_support
+   persistent_services
    facility_api
    workflows
    identity_management
