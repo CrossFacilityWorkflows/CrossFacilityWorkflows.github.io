@@ -13,6 +13,8 @@ Balsam has been developed at ALCF since 2013, when it was first conceived to lin
 
 NERSC
 ~~~~~
+Information about workflow tools that are officially supported at NERSC is
+available `here <https://docs.nersc.gov/jobs/workflow-tools/>`_.
 
 OLCF
 ~~~~
