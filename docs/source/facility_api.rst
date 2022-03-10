@@ -77,5 +77,8 @@ https://docs.nersc.gov/services/sfapi/
 
 Other
 ~~~~~
-ETH's CSCS is developing `FirecREST <https://github.com/eth-cscs/firecrest>`_ to program
-Petascale resource access of HPC infrastructure by using REST API
+ETH's CSCS is developing `FirecREST <https://github.com/eth-cscs/firecrest>`_,
+a RESTful Services Gateway to High-Performance Computing (HPC) resources, is a
+high-performance and reusable framework that integrates with existing HPC
+infrastructure, thus enabling the access to HPC resources to web-enabled
+services.
