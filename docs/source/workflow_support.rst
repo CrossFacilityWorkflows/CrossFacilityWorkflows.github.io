@@ -1,5 +1,5 @@
-Workflow Support
-================
+Persistent Services Platforms
+=============================
 
 This page documents infrastructure available at each site to support
 user-managed applications and services such as data portals, science gateways, workflow managers,
