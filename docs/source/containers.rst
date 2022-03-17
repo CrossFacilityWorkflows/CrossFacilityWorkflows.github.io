@@ -9,10 +9,6 @@ This page documents container infrastructure available at each site.
 Applications deployed in containers typically run with little to no degradation in performance. This is in line with expectations, and is especially applicable in the context of applications with significant dependence on the filesystem, such as Python applications (which typically load many module files at startup), dynamically linked applications (which need to load shared object files, as opposed to the single-file statically linked applications), and applications with a significant data dependency, where those data dependencies can be included in the container. The reason in all of these cases is that the number of references to files on the remote filesystem is reduced, as they are resolved to the compute node-local container instead.
 
 
-.. attention::
-
-    Under construction
-
 .. _ALCF Singularity:
 
 ALCF
