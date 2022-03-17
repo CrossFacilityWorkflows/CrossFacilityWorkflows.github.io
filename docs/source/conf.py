@@ -23,12 +23,13 @@ import sphinx_rtd_theme
 
 project = 'Cross Facility Workflows'
 copyright = '2021, ALCF, OLCF, NERSC'
-authors = 'Suhas Somnath, Johannes Blaschke, Bjeorn Enders, Shane Canon, Sean Wilkinson, Deborah Bard, Mallikarjun Shankar, Tom Uram, Katie Antypas'
+authors = 'Katie Antypas, Debbie Bard, Johannes Blaschke, R. Shane Canon, Bjeorn Enders, ' \
+          'Suhas Somnath, Sean Wilkinson, Mallikarjun Shankar, Tom Uram'
 
 # The short X.Y version
-version = '0.0'
+version = '1.0'
 # The full version, including alpha/beta/rc tags
-release = '0.0'
+release = '1.0'
 
 
 # -- General configuration ---------------------------------------------------
