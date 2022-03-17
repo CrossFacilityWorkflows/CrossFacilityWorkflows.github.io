@@ -13,7 +13,7 @@ vital to steer experiments where instrument time is limited. Hence experiments
 are adopting a strategy of integrating HPC facilities into their data processing
 pipelines in order to make use of their computational resources.  Here we
 demonstrate how this workflow was deployed at multiple sites: data was collected
-at the `LCLS <https://lcls.slac.stanford.edu/>`_ and analyszed at `NERSC
+at the `LCLS <https://lcls.slac.stanford.edu/>`_ and analyzed at `NERSC
 <https://www.nersc.gov>`_, `OLCF <https://lcls.slac.stanford.edu/>`_, and `ALCF
 <https://www.alcf.anl.gov/>`_.
 
