@@ -34,3 +34,12 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    :caption: Use cases
 
    cctbx
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: Research efforts
+
+   team
+   publications
+   projects
