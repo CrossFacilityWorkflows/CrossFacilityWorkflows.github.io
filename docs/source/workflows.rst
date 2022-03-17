@@ -1,6 +1,8 @@
 Workflows Tools
 ===============
 
+Supporting data-centric science involves the movement of data, multi-stage processing, and visualization at scales where manual control becomes prohibitive and automation is needed. Workflow technologies can improve the productivity and efficiency of data-centric science by orchestrating and automating these steps.
+
 This page describes approaches available for running workflows within and between computing sites.
 
 ALCF
@@ -13,8 +15,8 @@ Balsam has been developed at ALCF since 2013, when it was first conceived to lin
 
 NERSC
 ~~~~~
-Information about workflow tools that are officially supported at NERSC is
-available `here <https://docs.nersc.gov/jobs/workflow-tools/>`_.
+
+At NERSC a working group reviews and tests workflow tools to provide documentation for NERSC users. If possible, these doc pages are created collaboratively with the respective workflow tool developers to provide expertise from both worlds. The docs are updated with new information when new tools are evaluated. An overview of all reviewed workflow tools is given `here <https://docs.nersc.gov/jobs/workflow-tools/>`_. If users are unsure which workflow tool fits their workflow best, they are encouraged to get in touch with NERSC consultants.
 
 OLCF
 ~~~~
