@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APIs for Facilities &mdash; Cross Facility Workflows 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Workflow Tools" href="workflows.html" />
+    <link rel="prev" title="Persistent Services Platforms" href="persistent_services.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Cross Facility Workflows
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Technologies</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="containers.html">Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistent_services.html">Persistent Services Platforms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">APIs for Facilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#alcf">ALCF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nersc">NERSC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#olcf">OLCF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">Workflow Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="identity_management.html">Identity Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_transfer.html">Data Transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_management.html">Data Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Use cases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cctbx.html">Using CCTBX in a Superfacility Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xpcs.html">Cross-facility Analysis with XPCS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Research efforts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="team.html">Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cross Facility Workflows</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>APIs for Facilities</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/facility_api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="apis-for-facilities">
+<h1>APIs for Facilities<a class="headerlink" href="#apis-for-facilities" title="Permalink to this headline">¶</a></h1>
+<p>Engineering workflow pipelines to handle data collection and analysis at large scale
+across a distributed architecture — spanning separate instrument and supercomputing
+facilities, management structures, authentication and authorizations systems,
+and other technical and organizational disparities — requires reliable, easily
+programmable interfaces (APIs) to HPC resources that are based on common,
+industry-standard tools and reusable by multiple science communities.
+Thus, HPC APIs are a key enabling technology for projects that use modern instrument facilities,
+allowing them to continue their natural upward scaling by leveraging off-site supercomputing
+resources as easily as they have leveraged on-site HPC clusters in the past.</p>
+<p>This page documents programmatic interfaces to HPC resources to enable a new
+paradigm of scientific endeavors, especially those that are automated or span
+multiple facilities.</p>
+<section id="alcf">
+<h2>ALCF<a class="headerlink" href="#alcf" title="Permalink to this headline">¶</a></h2>
+<p>ALCF has traditionally developed the Cobalt scheduler for its systems, opening the opportunity to also expose aspects of the scheduler via a programmable API. This work is underway as part of scheduler development in preparation for the Aurora system.</p>
+</section>
+<section id="nersc">
+<h2>NERSC<a class="headerlink" href="#nersc" title="Permalink to this headline">¶</a></h2>
+<p>NERSC is developing the <a class="reference external" href="https://docs.nersc.gov/services/sfapi/">SuperFacility API</a>
+that can be used to script jobs or workflows running against NERSC systems.
+The ultimate goal is the totally automated use of NERSC, integrating everything from compute to storage.</p>
+<p>Currently, the API is hosted at <a class="reference external" href="https://api.nersc.gov/api/v1.2/">https://api.nersc.gov/api/v1.2/</a> and it covers the
+following functional categories</p>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">SF API endpoints</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Endpoint</p></th>
+<th class="head"><p>Usage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/account</span></code></p></td>
+<td><p>Get accounting data about the user’s projects, roles, groups and compute and storage allocations</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/compute</span></code></p></td>
+<td><p>Run batch jobs and query job and queue statuses on compute resources</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/status</span></code></p></td>
+<td><p>Query the status of system components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/storage</span></code></p></td>
+<td><p>Transfer files between storage tiers and external facilities (uses Globus)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/utilities</span></code></p></td>
+<td><p>Traverse the file system, upload and download small files, and execute commands</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/tasks</span></code></p></td>
+<td><p>Query the status and results of asynchronous operations</p></td>
+</tr>
+</tbody>
+</table>
+<p>The inclusion of some of these endpoints in the API are rather straightforward.
+For example, it is essential for HPC workflows to submit jobs and query their status
+(<code class="docutils literal notranslate"><span class="pre">/compute</span></code>) and be able to move data efficiently within the HPC center and to the outside world (<code class="docutils literal notranslate"><span class="pre">/storage</span></code>).
+The inclusion of other endpoints follows very specific motivations.</p>
+<p>Experiments often require HPC-scale computing at short notice because detector output,
+the driver of compute demand, often varies cyclically.
+Some experiments may even arrange for multiple compute sites to be available to handle workloads on demand.
+To build a truly automated and resilient workflow, the scientist (or workflow orchestration service)
+needs to be able to query the health and status of a facility and make real-time decisions
+based on the response; for example, if a filesystem is unavailable, the workflow pipeline must
+not send data to it. This key requirement is fulfilled with a <code class="docutils literal notranslate"><span class="pre">/status</span></code> endpoint.</p>
+<p>Science teams often comprise tens or hundreds of members at different organizations worldwide,
+with differing needs for data access. These collaborations need a way for PIs to automate the
+management of their team members’ accounts at the HPC facility — for example, to set
+access permissions. They also need to manage petabyte-scale data sets across multiple
+file systems, and move data into and out of the HPC facility as needed. Including these
+functions through an <code class="docutils literal notranslate"><span class="pre">/account</span></code> endpoint allows automation of these tasks.</p>
+<p>Information on how to sign up for API and find example for its use can be found on NERSC’s documentation pages:
+<a class="reference external" href="https://docs.nersc.gov/services/sfapi/">https://docs.nersc.gov/services/sfapi/</a></p>
+</section>
+<section id="olcf">
+<h2>OLCF<a class="headerlink" href="#olcf" title="Permalink to this headline">¶</a></h2>
+<p>The OLCF is exploring different APIs in the context of its machines and policies as of this writing.</p>
+</section>
+<section id="other">
+<h2>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h2>
+<p>ETH’s CSCS is developing <a class="reference external" href="https://github.com/eth-cscs/firecrest">FirecREST</a>,
+a RESTful Services Gateway to High-Performance Computing (HPC) resources. It
+is a high-performance and reusable framework that integrates with existing HPC
+infrastructure, thus enabling the access to HPC resources to web-enabled
+services.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="persistent_services.html" class="btn btn-neutral float-left" title="Persistent Services Platforms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="workflows.html" class="btn btn-neutral float-right" title="Workflow Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, ALCF, OLCF, NERSC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

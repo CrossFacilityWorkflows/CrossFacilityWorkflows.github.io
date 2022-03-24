@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Transfer &mdash; Cross Facility Workflows 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Management" href="data_management.html" />
+    <link rel="prev" title="Identity Management" href="identity_management.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Cross Facility Workflows
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Technologies</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="containers.html">Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistent_services.html">Persistent Services Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="facility_api.html">APIs for Facilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">Workflow Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="identity_management.html">Identity Management</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Transfer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#alcf">ALCF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nersc">NERSC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#olcf">OLCF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_management.html">Data Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Use cases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cctbx.html">Using CCTBX in a Superfacility Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xpcs.html">Cross-facility Analysis with XPCS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Research efforts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="team.html">Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cross Facility Workflows</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Data Transfer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/data_transfer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-transfer">
+<span id="id1"></span><h1>Data Transfer<a class="headerlink" href="#data-transfer" title="Permalink to this headline">¶</a></h1>
+<p>This page documents for users how to transfer data between the three ASCR Facilities. In general, instead of using tools like <code class="docutils literal notranslate"><span class="pre">scp</span></code> or <code class="docutils literal notranslate"><span class="pre">rsync</span></code> for large data transfers, we recommend that data be transferred using <a class="reference external" href="http://app.globus.org">Globus</a>, which is able to transfer data more efficiently and with less user interaction.</p>
+<p>Globus is a service for scheduling data transfers between sites, filling a particular niche among users of large datasets within and between DOE computing facilities and users’ home institutions. Instead of synchronously transferring files, users schedule transfers to take place, and the Globus service manages the transfer, recovering as needed from failures, and notifying the user when the transfer completes. In addition to this convenient reliability, transfers over Globus are typically very performant, whether the user is transferring a few very large files, or a large collection of very small files. We also provide details of the Globus endpoints available at each of the ASCR facilities.</p>
+<section id="alcf">
+<h2>ALCF<a class="headerlink" href="#alcf" title="Permalink to this headline">¶</a></h2>
+<p>Users at the ALCF can leverage multiple Globus endpoints for their data transfers, using their ALCF credentials.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 51%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Endpoint Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Recommended Use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ALCF Theta</p></td>
+<td><p>The main filesystem delivered with Theta.</p></td>
+<td><p>Transfers to/from the Theta
+filesystem at ALCF</p></td>
+</tr>
+<tr class="row-odd"><td><p>ALCF Eagle</p></td>
+<td><p>Eagle is a new 100 PB filesystem with
+additional data sharing functionality exposed
+through Globus.</p></td>
+<td><p>Transfers to/from Eagle
+filesystem</p></td>
+</tr>
+<tr class="row-even"><td><p>ALCF Grand</p></td>
+<td><p>Grand is a new 100 PB filesystem.</p></td>
+<td><p>Transfers to/from Grand
+filesystem</p></td>
+</tr>
+<tr class="row-odd"><td><p>ALCF HPSS</p></td>
+<td><p>Tape storage system; for more details, see
+link.</p></td>
+<td><p>Transfers to/from ALCF
+tape archive</p></td>
+</tr>
+</tbody>
+</table>
+<p>For more information about Globus sharing using Eagle, see the <a class="reference external" href="https://alcf.anl.gov/support-center/theta-and-thetagpu/eagle-data-sharing">related documentation</a>.</p>
+</section>
+<section id="nersc">
+<h2>NERSC<a class="headerlink" href="#nersc" title="Permalink to this headline">¶</a></h2>
+<p>You can log into the Globus web interface with your NERSC credentials (by selecting NERSC in the drop down menu of supported identity providers)
+or using many of the other supported providers listed that you can authenticate against.
+NERSC maintains several Globus endpoints that can be activated for individual use by any NERSC user.
+The list of endpoints is provided in the table below.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 52%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Endpoint Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Recommended Use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NERSC DTN</p></td>
+<td><p>Multi-node, high performance transfer system
+with access to all NERSC Global File
+systems (NGF) as well as Cori Scratch</p></td>
+<td><p>Almost all data transfers
+needs into &amp; out of NERSC</p></td>
+</tr>
+<tr class="row-odd"><td><p>NERSC HPSS</p></td>
+<td><p>Single node system connected directly to
+the NERSC HPSS tape archive</p></td>
+<td><p>Remote transfers into &amp;
+out of HPSS</p></td>
+</tr>
+<tr class="row-even"><td><p>NERSC SHARE</p></td>
+<td><p>Single node system with read-only access to
+some NERSC file systems</p></td>
+<td><p>Shared Globus endpoint</p></td>
+</tr>
+<tr class="row-odd"><td><p>NERSC S3</p></td>
+<td><p>Single node system with read-only
+access to NERSC homes</p></td>
+<td><p>Data transfers to  &amp; from
+Amazon S3</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Data can be shared at NERSC using <a class="reference external" href="https://www.globus.org/data-sharing">Globus Sharing</a>. Currently shared endpoints are read-only, no writing is allowed. See <a class="reference external" href="https://docs.nersc.gov/services/globus/#sharing-data-with-globus">this page</a> for more information.</p></li>
+<li><p>NERSC has an experimental Globus S3 endpoint that can be used to access and share content from AWS S3. See <a class="reference external" href="https://docs.nersc.gov/services/globus/#globus-s3-endpoint">this page</a> for more information.</p></li>
+</ul>
+</section>
+<section id="olcf">
+<h2>OLCF<a class="headerlink" href="#olcf" title="Permalink to this headline">¶</a></h2>
+<p>OLCF uses Globus for large bulk transfers into and out of the facility.
+Documentation is available for <a class="reference external" href="https://docs.olcf.ornl.gov/data/transferring.html#using-globus-from-your-local-machine">transfers from personal computing devices</a> as well as endpoints from one facility to another.
+See <a class="reference external" href="https://docs.olcf.ornl.gov/data/transferring.html">this page</a> for more information.</p>
+<p>The recommendation to transfer files in and out of OLCF is to begin from the external site, and tar files before executing a transfer between endpoints.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 52%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Endpoint Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Recommended Use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>OLCF DTN</p></td>
+<td><p>Multi-node, high performance transfer system
+with access to OLCF centewide file system</p></td>
+<td><p>Almost all data transfers
+needs into &amp; out of OLCF</p></td>
+</tr>
+<tr class="row-odd"><td><p>OLCF HPSS</p></td>
+<td><p>Single node system connected directly to
+the NERSC HPSS tape archive</p></td>
+<td><p>Remote transfers into &amp;
+out of HPSS</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="identity_management.html" class="btn btn-neutral float-left" title="Identity Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data_management.html" class="btn btn-neutral float-right" title="Data Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, ALCF, OLCF, NERSC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

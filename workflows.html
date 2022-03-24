@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workflow Tools &mdash; Cross Facility Workflows 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Identity Management" href="identity_management.html" />
+    <link rel="prev" title="APIs for Facilities" href="facility_api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Cross Facility Workflows
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Technologies</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="containers.html">Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistent_services.html">Persistent Services Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="facility_api.html">APIs for Facilities</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Workflow Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#alcf">ALCF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nersc">NERSC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#olcf">OLCF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="identity_management.html">Identity Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_transfer.html">Data Transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_management.html">Data Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Use cases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cctbx.html">Using CCTBX in a Superfacility Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xpcs.html">Cross-facility Analysis with XPCS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Research efforts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="team.html">Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cross Facility Workflows</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Workflow Tools</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/workflows.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="workflow-tools">
+<h1>Workflow Tools<a class="headerlink" href="#workflow-tools" title="Permalink to this headline">¶</a></h1>
+<p>This page describes approaches available for running workflows within and between computing sites.</p>
+<section id="alcf">
+<h2>ALCF<a class="headerlink" href="#alcf" title="Permalink to this headline">¶</a></h2>
+<p>Commonly-used workflows tools at ALCF include <a class="reference external" href="https://parsl-project.org/">Parsl</a>, <a class="reference external" href="https://balsam.readthedocs.io/en/latest/">Balsam</a>, and <a class="reference external" href="http://swift-lang.org/main/">Swift</a>. Workflow technology is rapidly evolving, as project teams consider how to best run jobs that combine simulation and AI, campaigns of thousands to millions of jobs, or workloads with diverse parallelism. Projects often invent their own approach to workflows, or have integrated with other workflow toolkits; ALCF welcomes these approaches and aims to work with users to achieve simple, efficient workflow solutions for users.</p>
+</section>
+<section id="nersc">
+<h2>NERSC<a class="headerlink" href="#nersc" title="Permalink to this headline">¶</a></h2>
+<p>Information about workflow tools that are officially supported at NERSC is
+available <a class="reference external" href="https://docs.nersc.gov/jobs/workflow-tools/">here</a>.</p>
+</section>
+<section id="olcf">
+<h2>OLCF<a class="headerlink" href="#olcf" title="Permalink to this headline">¶</a></h2>
+<p>Information about workflow tools that are officially supported at OLCF is
+available <a class="reference external" href="https://docs.olcf.ornl.gov/software/workflows/index.html">here</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="facility_api.html" class="btn btn-neutral float-left" title="APIs for Facilities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="identity_management.html" class="btn btn-neutral float-right" title="Identity Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, ALCF, OLCF, NERSC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
