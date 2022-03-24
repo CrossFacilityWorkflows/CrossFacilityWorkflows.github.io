@@ -9,8 +9,8 @@ Balsam has been developed at ALCF since 2013, when it was first conceived to lin
 
 Cross-facility Workflow
 -----------------------
-.. figure:: ./assets/balsam_xpcs_diagram.png
-
 In anticipation of the need of experimentalists to direct their workflows to individual facilities, we constructed a series of test scenarios using `XPCS-Eigen <https://github.com/AdvancedPhotonSource/xpcs-eigen>`_ and a proxy application, modeling real-world experiment-time analysis. Balsam uses a central server for managing jobs; using the Python API, we programmatically injected XPCS jobs of varying sizes, and job for the proxy application. To enable these jobs to be run at the three DOE computing facilities, we set up a Balsam Site on each of Theta at ALCF, Summit at OLCF, and Cori at NERSC. Balsam Sites periodically communicate with the main Balsam Server to obtain job lists, stage in necessary input datasets, work with the local job scheduler to submit and monitor jobs through their lifetime on the machine, and transfer output datasets to the specified destination, in this case at the Advanced Photon Source (APS). When individual jobs have run to completion, the Site updates the job status on the main Balsam server. This process of injecting jobs from the APS continued over a period of time, scheduling jobs simultaneously at each of ALCF, OLCF, and NERSC. Throughout the experiment, the APS agent that was submitting jobs queried the Balsam server for job throughput at each compute facility, and adaptively directed the flow of jobs to the site that was achieving the highest throughput.
+
+.. figure:: ./assets/balsam_xpcs_diagram.png
 
 Full details of these experiments, including throughput metrics, data staging optimization, and fault tolerance tests are available in the `preprint <https://arxiv.org/pdf/2105.06571.pdf>`_, *Toward Real-Time Analysis of Experimental Science Workloads on Geographically Distributed Supercomputers*, Salim et al.
