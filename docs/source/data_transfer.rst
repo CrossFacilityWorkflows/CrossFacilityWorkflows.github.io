@@ -7,35 +7,24 @@ This page documents for users how to transfer data between the three ASCR Facili
 ALCF
 ~~~~
 
-Users at the ALCF can leverage multiple Globus endpoints for their data transfers
+Users at the ALCF can leverage multiple Globus endpoints for their data transfers.
 
-+----------------+-----------------------------------------------+---------------------------+
-|  Endpoint Name |               Description                     | Recommended Use           |
-+================+===============================================+===========================+
-| `ALCF Theta <https://app.globus.org/file-manager?origin_id=08925f04-569f-11e7-bef8-22000b9a448b&origin_path=%2F>`_      |                                               | Transfers to/from the Theta     |
-|                |                                               | filesystem at ALCF       |
-+----------------+-----------------------------------------------+---------------------------+
-| `ALCF Eagle <https://app.globus.org/file-manager?origin_id=05d2c76a-e867-4f67-aa57-76edeb0beda0>`_ | Eagle is a 100 PB filesystem with additional  | Transfers to/from Eagle   |
-|                | data sharing functionality exposed through    | filesystem                |
-|                | Globus.                                       |                           |
-+----------------+-----------------------------------------------+---------------------------+
-| `ALCF Grand <https://app.globus.org/file-manager?origin_id=08925f04-569f-11e7-bef8-22000b9a448b&origin_path=%2Fgrand%2F>`_ | Grand is a 100 PB filesystem  | Transfers to/from Grand   |
-|                |     | filesystem                |
-|                |                                       |                           |
-+----------------+-----------------------------------------------+---------------------------+
-| `ALCF HPSS <https://app.globus.org/file-manager?origin_id=de463ec4-6d04-11e5-ba46-22000b92c6ec&origin_path=%2F>`_  |                                               | Transfers to/from ALCF    |
-|                |                                               | tape archive              |
-+----------------+-----------------------------------------------+---------------------------+
-
-* - Heading row 1, column 1
-     - Heading row 1, column 2
-     - Heading row 1, column 3
-   * - Row 1, column 1
-     -
-     - Row 1, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
++----------------+-----------------------------------------------+-----------------------------+
+|  Endpoint Name |               Description                     | Recommended Use             |
++================+===============================================+=============================+
+| `ALCF Theta    | The main filesystem delivered with Theta.     | Transfers to/from the Theta |
+|                |                                               | filesystem at ALCF          |
++----------------+-----------------------------------------------+-----------------------------+
+| `ALCF Eagle    | Eagle is a new 100 PB filesystem with         | Transfers to/from Eagle     |
+|                | additional data sharing functionality exposed | filesystem                  |
+|                | through Globus.                               |                             |
++----------------+-----------------------------------------------+-----------------------------+
+| `ALCF Grand    | Grand is a new 100 PB filesystem              | Transfers to/from Grand     |
+|                |                                               | filesystem                  |
++----------------+-----------------------------------------------+-----------------------------+
+| `ALCF HPSS     | Tape storage system; for more details, see    | Transfers to/from ALCF      |
+|                | link.                                         | tape archive                |
++----------------+-----------------------------------------------+-----------------------------+
      
 For more information about Globus sharing using Eagle, see the `related documentation <https://alcf.anl.gov/support-center/theta-and-thetagpu/eagle-data-sharing>`_.
 
