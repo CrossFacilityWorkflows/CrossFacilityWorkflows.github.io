@@ -1,4 +1,4 @@
-Workflows Tools
+Workflow Tools
 ===============
 
 This page describes approaches available for running workflows within and between computing sites.
