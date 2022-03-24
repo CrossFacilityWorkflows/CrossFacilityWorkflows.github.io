@@ -34,6 +34,7 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    :caption: Use cases
 
    cctbx
+   xpcs
 
 .. toctree::
    :glob:
