@@ -7,7 +7,7 @@ This effort was led by the following team members:
 ALCF
 ~~~~
 1. `Thomas D. Uram <https://www.alcf.anl.gov/about/people/thomas-d-uram>`_
-2. `Venkat Vishwanath <https://www.alcf.anl.gov/about/people/venkatram-vishwanath`_
+2. `Venkat Vishwanath <https://www.alcf.anl.gov/about/people/venkatram-vishwanath>`_
 
 NERSC
 ~~~~~
