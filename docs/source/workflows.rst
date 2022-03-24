@@ -6,10 +6,7 @@ This page describes approaches available for running workflows within and betwee
 ALCF
 ~~~~
 
-Balsam
-------
-Balsam has been developed at ALCF since 2013, when it was first conceived to link high energy physics workflows for the LHC with Argonne's Mira supercomputer. The latest version of Balsam consists of a central server, reachable via a REST API, and user-deployable Balsam `Sites` which communicate with the server to obtain jobs and interact with the local scheduler to run jobs, monitor their status, and synchronize progress with the server. While the single server maintains all job state, Sites are deployed by users on computing resources where they have accounts, minimizing the barrier to entry and providing a user a global view of their available computing. Due to its modular design, Balsam can easily adapt to new systems, and currently includes support for multiple systems at ALCF, Summit at OLCF, and Cori and Perlmutter at NERSC. More information about Balsam is available on the `documentation site <https://balsam.readthedocs.io/en/latest/>`_.
-
+Commonly-used workflows tools at ALCF include `Parsl <https://parsl-project.org/>`, `Balsam <https://balsam.readthedocs.io/en/latest/>`, and `Swift <http://swift-lang.org/main/>`. Workflow technology is rapidly evolving, as project teams consider how to best run jobs that combine simulation and AI, campaigns of thousands to millions of jobs, or workloads with diverse parallelism. Projects often invent their own approach to workflows, or have integrated with other workflow toolkits; ALCF welcomes these approaches and aims to work with users to achieve simple, efficient workflow solutions for users.
 
 NERSC
 ~~~~~
