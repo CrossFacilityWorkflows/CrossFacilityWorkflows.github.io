@@ -1,4 +1,4 @@
-Cross-facility analysis with XPCS
+Cross-facility Analysis with XPCS
 =================================
 
 Page under construction to describe XPCS use case.
