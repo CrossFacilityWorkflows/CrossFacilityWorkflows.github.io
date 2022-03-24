@@ -27,6 +27,16 @@ Users at the ALCF can leverage multiple Globus endpoints for their data transfer
 |                |                                               | tape archive              |
 +----------------+-----------------------------------------------+---------------------------+
 
+* - Heading row 1, column 1
+     - Heading row 1, column 2
+     - Heading row 1, column 3
+   * - Row 1, column 1
+     -
+     - Row 1, column 3
+   * - Row 2, column 1
+     - Row 2, column 2
+     - Row 2, column 3
+     
 For more information about Globus sharing using Eagle, see the `related documentation <https://alcf.anl.gov/support-center/theta-and-thetagpu/eagle-data-sharing>`_.
 
 NERSC
