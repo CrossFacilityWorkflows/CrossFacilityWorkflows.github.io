@@ -11,4 +11,6 @@ In anticipation of the need of experimentalists to direct their workflows to ind
 
 ** Under construction; Tom will finish today. **
 
+XPCS-Eigen, specifically https://github.com/AdvancedPhotonSource/xpcs-eigen
+
 More information about the experiments run with Balsam and XPCS are available in the `preprint <https://arxiv.org/pdf/2105.06571.pdf>`_.
