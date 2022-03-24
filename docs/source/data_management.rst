@@ -5,6 +5,10 @@ Data Management
 
 This section describes tools that assist in managing data across facilities.
 
+.. note::
+   Does data management include Globus? I think (might be wrong) that DataFed is like Globus with a metadata layer, so they are similar. 
+   DataFed and ADIOS strike me as very different things, DataFed being Globus-like, and ADIOS for data management within an application.
+
 .. _DataFed:
 
 DataFed
