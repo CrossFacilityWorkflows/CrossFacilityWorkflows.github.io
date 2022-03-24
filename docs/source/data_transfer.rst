@@ -7,33 +7,33 @@ This page documents for users how to transfer data between the three ASCR Facili
 ALCF
 ~~~~
 
-Users at the ALCF can leverage multiple Globus endpoints for their data transfers.
+Users at the ALCF can leverage multiple Globus endpoints for their data transfers, using their ALCF credentials.
 
 +----------------+-----------------------------------------------+-----------------------------+
 |  Endpoint Name |               Description                     | Recommended Use             |
 +================+===============================================+=============================+
-| `ALCF Theta <https://www.alcf.anl.gov/support-center/theta/using-hpss-theta>`_    | The main filesystem delivered with Theta.     | Transfers to/from the Theta |
+| ALCF Theta     | The main filesystem delivered with Theta.     | Transfers to/from the Theta |
 |                |                                               | filesystem at ALCF          |
 +----------------+-----------------------------------------------+-----------------------------+
-| `ALCF Eagle    | Eagle is a new 100 PB filesystem with         | Transfers to/from Eagle     |
+| ALCF Eagle     | Eagle is a new 100 PB filesystem with         | Transfers to/from Eagle     |
 |                | additional data sharing functionality exposed | filesystem                  |
 |                | through Globus.                               |                             |
 +----------------+-----------------------------------------------+-----------------------------+
-| `ALCF Grand    | Grand is a new 100 PB filesystem              | Transfers to/from Grand     |
+| ALCF Grand     | Grand is a new 100 PB filesystem.             | Transfers to/from Grand     |
 |                |                                               | filesystem                  |
 +----------------+-----------------------------------------------+-----------------------------+
-| `ALCF HPSS     | Tape storage system; for more details, see    | Transfers to/from ALCF      |
+| ALCF HPSS      | Tape storage system; for more details, see    | Transfers to/from ALCF      |
 |                | link.                                         | tape archive                |
 +----------------+-----------------------------------------------+-----------------------------+
      
-For more information about Globus sharing using Eagle, see the `related documentation <https://alcf.anl.gov/support-center/theta-and-thetagpu/eagle-data-sharing>`_.
+For more information about Globus sharing using Eagle, see the `related documentation <https://alcf.anl.gov/support-center/theta-and-thetagpu/eagle-data-sharing>`_. 
 
 NERSC
 ~~~~~
 You can log into the Globus web interface with your NERSC credentials (by selecting NERSC in the drop down menu of supported identity providers) 
 or using many of the other supported providers listed that you can authenticate against. 
 NERSC maintains several Globus endpoints that can be activated for individual use by any NERSC user. 
-The list of endpoints are provided in the table below. 
+The list of endpoints is provided in the table below. 
 
 
 +----------------+-----------------------------------------------+---------------------------+
