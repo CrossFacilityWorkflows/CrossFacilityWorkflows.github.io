@@ -12,7 +12,7 @@ Users at the ALCF can leverage multiple Globus endpoints for their data transfer
 +----------------+-----------------------------------------------+-----------------------------+
 |  Endpoint Name |               Description                     | Recommended Use             |
 +================+===============================================+=============================+
-| `ALCF Theta    | The main filesystem delivered with Theta.     | Transfers to/from the Theta |
+| `ALCF Theta <https://www.alcf.anl.gov/support-center/theta/using-hpss-theta>`_    | The main filesystem delivered with Theta.     | Transfers to/from the Theta |
 |                |                                               | filesystem at ALCF          |
 +----------------+-----------------------------------------------+-----------------------------+
 | `ALCF Eagle    | Eagle is a new 100 PB filesystem with         | Transfers to/from Eagle     |
