@@ -2,7 +2,7 @@ Identity Management
 ===================
 
 Identity management across facilities remains a challenge.
-There are currently not any multi-site solutions in place that simplify
+There are currently no multi-site solutions in place for
 creating and managing identities across the DOE sites.  However, there
 are various efforts underway that should address these challenges
 in the future.  Currently, users will need to request allocations
@@ -12,12 +12,14 @@ how to get allocations and establish access.
 ALCF
 ~~~~
 
-Coming soon
+The process for obtaining an account at ALCF begins with an allocation request. Users new to ALCF systems will often request a `discretionary allocation <https://www.alcf.anl.gov/science/directors-discretionary-allocation-program>`_, which grants a user account and a small number of compute hours with which to compile code, make initial runs, and collect performance data with the goal of applying for a larger allocation. User accounts can be managed through the `user accounts site <https://accounts.alcf.anl.gov/>`_.
+
+Larger allocations are awarded through competitive application processes, including `INCITE <http://www.doeleadershipcomputing.org/>`_ and `ALCC <https://science.osti.gov/ascr/Facilities/Accessing-ASCR-Facilities/ALCC>`_.
 
 NERSC
 ~~~~~
 In order to get an account at NERSC, you will need an allocation
-to assoicate with your account.  If you are part of an existing project,
+to associate with your account.  If you are part of an existing project,
 you can specify that project when you request your account.  Otherwise,
 you will need to request an allocation via ERCAP.  Accounts and allocations
 are managed via IRIS (https://iris.nersc.gov).
