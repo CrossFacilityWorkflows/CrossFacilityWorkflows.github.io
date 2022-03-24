@@ -5,9 +5,10 @@ Data Management
 
 This section describes tools that assist in managing data across facilities.
 
-.. note::
-   Does data management include Globus? I think (might be wrong) that DataFed is like Globus with a metadata layer, so they are similar. 
-   DataFed and ADIOS strike me as very different things, DataFed being Globus-like, and ADIOS for data management within an application.
+Globus
+------
+
+Globus is commonly used for managing data within and between compute facilities and users' home institutions. Details of using Globus at the compute facilities is available on the `Data Transfer page <https://crossfacilityworkflows.github.io/BestPractices/data_transfer.html>`_.
 
 .. _DataFed:
 
