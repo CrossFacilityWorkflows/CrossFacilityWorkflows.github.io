@@ -9,4 +9,6 @@ Balsam has been developed at ALCF since 2013, when it was first conceived to lin
 
 In anticipation of the need of experimentalists to direct their workflows to individual facilities, we conducted a series of test scenarios using XPCS and a proxy application, modeling real-world experiment-time analysis.
 
-Under construction; Tom will finish today.
+** Under construction; Tom will finish today. **
+
+More information about the experiments run with Balsam and XPCS are available in the `preprint <https://arxiv.org/pdf/2105.06571.pdf>`_.
