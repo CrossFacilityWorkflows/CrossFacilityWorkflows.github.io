@@ -35,7 +35,3 @@ user guides for the `command-line <https://ornl.github.io/DataFed/user/cli/guide
 `python <https://ornl.github.io/DataFed/user/python/high_level_guide.html>`_ application programming interfaces,
 `Jupyter notebooks and corresponding YouTube videos <https://ornl.github.io/DataFed/user/python/notebooks.html>`_ that were part of hands-on tutorials.
 
-Other
------
-Other tools for data management include `ADIOS <https://adios2.readthedocs.io/en/latest/index.html>`_.
-
