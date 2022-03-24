@@ -2,15 +2,7 @@
 
 Data Transfer
 =============
-This page documents for users how to transfer data between the three ASCR Facilities. In general, we recommend that data be transferred using Globus instead of ``scp``, ``rsync`` for large data transfers.  
-We also provide guidance on what Globus endpoints are available across the ASCR facilities. 
-
-
-.. _Globus:
-Globus
-------
-
-Globus is a service for scheduling data transfers between sites, filling a particular niche among users of large datasets at the DOE copmuting facilities (and elsewhere). Instead of synchronously transferring files, users schedule transfers to take place, and the Globus service manages the transfer, recovering as needed from failures, and notifying the user when the transfer completes. In addition to this convenient reliability, transfers over Globus are typically very performant, whether the user is transferring a few very large files, or a large collection of very small files.
+This page documents for users how to transfer data between the three ASCR Facilities. In general, instead of using tools like ``scp`` or ``rsync`` for large data transfers, we recommend that data be transferred using `Globus <http://app.globus.org`_, which is able to transfer data more efficiently and with less user interaction. Globus is a service for scheduling data transfers between sites, filling a particular niche among users of large datasets within and between DOE computing facilities and users' home institutions. Instead of synchronously transferring files, users schedule transfers to take place, and the Globus service manages the transfer, recovering as needed from failures, and notifying the user when the transfer completes. In addition to this convenient reliability, transfers over Globus are typically very performant, whether the user is transferring a few very large files, or a large collection of very small files. We also provide details of the Globus endpoints available at each of the ASCR facilities. 
 
 ALCF
 ~~~~
@@ -20,14 +12,18 @@ Users at the ALCF can leverage multiple Globus endpoints for their data transfer
 +----------------+-----------------------------------------------+---------------------------+
 |  Endpoint Name |               Description                     | Recommended Use           |
 +================+===============================================+===========================+
-| ALCF#DTN_THETA |                                               | Transfers to/from all     |
-|                |                                               | filesystems at ALCF       |
+| `ALCF Theta <https://app.globus.org/file-manager?origin_id=08925f04-569f-11e7-bef8-22000b9a448b&origin_path=%2F>`_      |                                               | Transfers to/from the Theta     |
+|                |                                               | filesystem at ALCF       |
 +----------------+-----------------------------------------------+---------------------------+
-| ALCF#DTN_EAGLE | Eagle is a 100 PB filesystem with additional  | Transfers to/from Eagle   |
+| `ALCF Eagle <https://app.globus.org/file-manager?origin_id=05d2c76a-e867-4f67-aa57-76edeb0beda0>`_ | Eagle is a 100 PB filesystem with additional  | Transfers to/from Eagle   |
 |                | data sharing functionality exposed through    | filesystem                |
 |                | Globus.                                       |                           |
 +----------------+-----------------------------------------------+---------------------------+
-| ALCF#DTN_HPSS  |                                               | Transfers to/from ALCF    |
+| `ALCF Grand <https://app.globus.org/file-manager?origin_id=08925f04-569f-11e7-bef8-22000b9a448b&origin_path=%2Fgrand%2F>`_ | Grand is a 100 PB filesystem  | Transfers to/from Grand   |
+|                |     | filesystem                |
+|                |                                       |                           |
++----------------+-----------------------------------------------+---------------------------+
+| `ALCF HPSS <https://app.globus.org/file-manager?origin_id=de463ec4-6d04-11e5-ba46-22000b92c6ec&origin_path=%2F>`_  |                                               | Transfers to/from ALCF    |
 |                |                                               | tape archive              |
 +----------------+-----------------------------------------------+---------------------------+
 
